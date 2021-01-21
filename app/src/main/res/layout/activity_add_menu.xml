@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    tools:context="com.example.NailedOwner.AddSaloonPhoto.AddsaloonPhotos">
+
+    <ScrollView
+        android:layout_above="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:id="@+id/txt_add"
+                    android:textColor="@color/light_black"
+                    android:text="Add Menu"
+                    android:textSize="@dimen/pading24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_margin="@dimen/pading20"
+                    android:id="@+id/RR_camera"
+                    android:layout_below="@+id/txt_add"
+                    android:background="@drawable/whiteeditround"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_camera"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/camera"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        ></ImageView>
+
+                    <TextView
+                        android:id="@+id/txt_photo"
+                        android:layout_below="@+id/img_camera"
+                        android:textColor="@color/light_black"
+                        android:layout_centerInParent="true"
+                        android:text="Add Photo"
+                        android:textSize="@dimen/pading16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_below="@+id/txt_photo"
+                        android:textColor="@color/light_black"
+                        android:text="(0/7)"
+                        android:textSize="@dimen/pading14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/LL_logo"
+                    android:layout_margin="@dimen/pading10"
+                    android:weightSum="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <RelativeLayout
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_centerInParent="true"
+                            android:text="Normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_centerInParent="true"
+                            android:text="Normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_centerInParent="true"
+                            android:text="Normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@color/Mehroon"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <ImageView
+                            android:padding="25dp"
+                            android:src="@mipmap/plus_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            ></ImageView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <EditText
+                    android:layout_marginRight="@dimen/pading20"
+                    android:layout_marginLeft="@dimen/pading20"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:hint="Dish Name"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <EditText
+                    android:layout_marginRight="@dimen/pading20"
+                    android:layout_marginLeft="@dimen/pading20"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:hint="Dish Price"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <EditText
+                    android:layout_marginRight="@dimen/pading20"
+                    android:layout_marginLeft="@dimen/pading20"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:hint="Dish Offer"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading20"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:textColor="@color/light_black"
+                    android:text="Choose Category"
+                    android:textSize="@dimen/pading24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+                <EditText
+                    android:backgroundTint="@color/Mehroon"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="@dimen/pading20"
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:drawableRight="@drawable/drop_dwon_new"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading18"
+                    android:hint="Waxing"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <EditText
+                    android:layout_marginRight="@dimen/pading20"
+                    android:layout_marginLeft="@dimen/pading20"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:hint="Prepare Time"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+                <RelativeLayout
+                    android:padding="@dimen/pading10"
+                    android:layout_margin="@dimen/pading20"
+                    android:layout_below="@+id/txt_add"
+                    android:background="@drawable/whiteeditround"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    >
+
+                    <EditText
+                        android:textColor="@color/whiteSecond"
+                        android:textSize="@dimen/pading16"
+                        android:hint="Description"
+                        android:background="@null"
+                        android:paddingLeft="10dp"
+                        android:inputType="text"
+                        android:layout_width="wrap_content"
+                        android:paddingRight="@dimen/pading10"
+                        android:drawablePadding="@dimen/pading10"
+                        android:layout_height="55dp"
+                        android:textColorHint="@color/whiteSecond"
+                        />
+
+                    <TextView
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/pading16"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0/15)"
+                        >
+                    </TextView>
+                </RelativeLayout>
+
+                <Button
+                    android:layout_marginBottom="@dimen/pading20"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:layout_marginRight="@dimen/pading20"
+                    android:layout_marginLeft="@dimen/pading20"
+                    android:id="@+id/btn_next_add_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="Next"
+                    android:background="@drawable/roundbttn_register"
+                    android:textAllCaps="false"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/pading18" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

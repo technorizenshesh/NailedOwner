@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context="com.example.NailedOwner.Nailed.NailedActivity">
+
+    <ScrollView
+        android:layout_above="@+id/RR_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/img_logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/logo"></ImageView>
+
+                <LinearLayout
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:layout_below="@+id/img_logo"
+                    android:layout_margin="@dimen/pading10"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <RelativeLayout
+                                android:backgroundTint="#F75353"
+                                android:background="@drawable/whiteeditround"
+                                android:layout_margin="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                >
+
+                                <TextView
+                                    android:textColor="@color/white"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="@dimen/pading24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5268"
+                                    android:textStyle="bold"
+                                    />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:text="Total Order"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/pading16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <RelativeLayout
+                                android:backgroundTint="#F4983A"
+                                android:background="@drawable/whiteeditround"
+                                android:layout_margin="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                >
+
+                                <TextView
+                                    android:textColor="@color/white"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="@dimen/pading24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5268"
+                                    android:textStyle="bold"
+                                    />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:layout_centerInParent="true"
+                                android:textSize="@dimen/pading16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Customers"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <RelativeLayout
+                                android:backgroundTint="#9794E9"
+                                android:background="@drawable/whiteeditround"
+                                android:layout_margin="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                >
+
+                                <TextView
+                                    android:textColor="@color/white"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="@dimen/pading24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5268"
+                                    android:textStyle="bold"
+                                    />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:layout_centerInParent="true"
+                                android:textSize="@dimen/pading16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New Order"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+                            <RelativeLayout
+                                android:backgroundTint="#16ADC2"
+                                android:background="@drawable/whiteeditround"
+                                android:layout_margin="15dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                >
+
+                                <TextView
+                                    android:textColor="@color/white"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="@dimen/pading24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5268"
+                                    android:textStyle="bold"
+                                    />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:gravity="left"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white"
+                                android:layout_centerInParent="true"
+                                android:textSize="@dimen/pading16"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Revenue"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <RelativeLayout
+                            android:backgroundTint="#2CC46E"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_margin="15dp"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            >
+
+                            <TextView
+                                android:textColor="@color/white"
+                                android:layout_centerInParent="true"
+                                android:textSize="@dimen/pading24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="959"
+                                android:textStyle="bold"
+                                />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/pading16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Returning \nCustomers"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_margin="@dimen/pading10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="left"
+                    android:text="Dashboard"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading18" />
+
+
+                <ImageView
+                    android:layout_margin="@dimen/pading10"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/mask_group">
+
+                </ImageView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/splash_bg"
+    >
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/progressBar"
+        android:background="@drawable/progresh_background"
+        android:elevation="@dimen/padding6"
+        android:padding="@dimen/padding5"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/green_new"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/img_logo"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/logo">
+
+            </ImageView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                >
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:background="@drawable/whiteeditround"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    app:ccp_clickable="true"
+                    app:ccp_showFlag="true"
+                    android:gravity="center"
+                    app:ccp_textSize="@dimen/padding11"
+                    app:ccp_defaultCode="91"
+                    app:ccp_textColor="@color/whiteSecond" />
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <Spinner
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:id="@+id/spinnerCountry"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:background="@android:color/transparent"
+                        android:backgroundTint="@color/whiteSecond"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:text="8899889988"
+                    android:maxLength="10"
+                    android:id="@+id/edt_mobile"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="9876543210"
+                    android:background="@drawable/whiteeditround"
+                    android:paddingLeft="10dp"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:background="@drawable/whiteeditround"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:text="123456"
+                    android:layout_toLeftOf="@+id/img_password"
+                    android:background="@null"
+                    android:id="@+id/edt_password"
+                    android:textColor="@color/whiteSecond"
+                    android:textSize="@dimen/pading16"
+                    android:hint="Password"
+                    android:paddingLeft="10dp"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:paddingRight="@dimen/pading10"
+                    android:drawablePadding="@dimen/pading10"
+                    android:layout_height="55dp"
+                    android:textColorHint="@color/whiteSecond"
+                    />
+                <ImageView
+                    android:id="@+id/img_password"
+                    android:layout_marginRight="@dimen/padding10"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                  android:tint="@color/black"
+                    android:background="@mipmap/eye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_gravity="right"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txt_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading20">
+            </TextView>
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/btn_Login"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/RR_login"
+                android:layout_gravity="center"
+                android:text="LOGIN"
+                android:textStyle="bold"
+                android:background="@drawable/roundbttn_register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading18" />
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:id="@+id/RR_google_login"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_width="match_parent"
+                android:background="@drawable/roundbttn_blue"
+                android:layout_height="55dp">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/google"
+                    >
+
+                </ImageView>
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIGN IN WITH GOOGLE"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RR_faceBook"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="@dimen/padding10"
+                android:layout_marginLeft="@dimen/padding10"
+                android:layout_width="match_parent"
+                android:backgroundTint="#395795"
+                android:background="@drawable/roundbttn_blue"
+                android:layout_height="55dp">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/facebook"
+                    >
+
+                </ImageView>
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SIGN IN WITH FACEBOOK"
+                    />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/pading20"
+                android:id="@+id/txt_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create New Account"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading18">
+            </TextView>
+
+        </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_below="@+id/txt_add"
+        android:background="@drawable/whiteeditround"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/camera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/txt_photo"
+            android:layout_below="@+id/img_camera"
+            android:textColor="@color/light_black"
+            android:layout_centerInParent="true"
+            android:text="Add Photo"
+            android:textSize="@dimen/pading16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/txt_photo"
+            android:textColor="@color/light_black"
+            android:text="(0/7)"
+            android:textSize="@dimen/pading14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

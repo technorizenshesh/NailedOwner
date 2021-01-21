@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    tools:context="com.example.NailedOwner.AddServicesTwo.AddServicesTwo">
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/progressBar"
+        android:background="@drawable/progresh_background"
+        android:elevation="@dimen/padding6"
+        android:padding="@dimen/padding5"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/green_new"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/RR_add"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txt_add"
+            android:textColor="@color/white"
+            android:text="Add Your Certificate"
+            android:textSize="@dimen/pading20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:layout_marginRight="@dimen/pading10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/plus_one"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            ></ImageView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_margin="@dimen/pading10"
+        android:id="@+id/RR_camera"
+        android:layout_below="@+id/RR_add"
+        android:background="@drawable/whiteeditround"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/RR_certificate"
+            android:layout_margin="@dimen/pading10"
+            android:layout_alignParentBottom="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/camera"
+                android:layout_width="@dimen/padding40"
+                android:layout_height="@dimen/padding40"
+                ></ImageView>
+
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/img_camera"
+            android:src="@mipmap/certifiacte"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/txt_photo"
+            android:layout_below="@+id/img_camera"
+            android:textColor="@color/light_black"
+            android:layout_centerInParent="true"
+            android:text="Upload capture"
+            android:textSize="@dimen/pading16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/txt_photo"
+            android:textColor="@color/light_black"
+            android:text="(png/jpg/pdf)"
+            android:textSize="@dimen/pading14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_marginBottom="@dimen/pading20"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/pading20"
+        android:layout_marginRight="@dimen/pading20"
+        android:layout_marginLeft="@dimen/pading20"
+        android:id="@+id/btn_next_certificate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Next"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/pading18" />
+
+
+</RelativeLayout>

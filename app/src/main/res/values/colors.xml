@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="whiteSecond">#D6D6D6</color>
+    <color name="backgroundColorScreen">#F8F8F8</color>
+    <color name="black">#000000</color>
+    <color name="black1">#171717</color>
+    <color name="greyText">#999999</color>
+    <color name="lightblack">#141414</color>
+    <color name="overlayBlack">#EE292929</color>
+    <color name="overlayBlackSecond">#333333</color>
+    <color name="greyBackground">#F8F8F8</color>
+    <color name="greyBackgroundSecond">#eeeeee</color>
+    <color name="grey">#cccccc</color>
+    <color name="grayLight">#F3F3F3</color>
+    <color name="green">#26A541</color>
+    <color name="rippleDarkRed">#3F0000</color>
+    <color name="orange">#F5D878</color>
+    <color name="dimgray">#BE696969</color>
+    <color name="dividerDark">#999999</color>
+    <color name="green_new">#009245</color>
+    <color name="colorAccentBlue">#03a9f4</color>
+    <color name="colorAccentGrey">#999999</color>
+    <color name="colorAccentGreen">#557f5f</color>
+
+    <color name="colorAccentRed">#ff0000</color>
+    <color name="textColorPrimaryLight">#1C1C1C</color>
+    <color name="textColorSecondary">#404040</color>
+    <color name="textColorSecondaryDark">#212121</color>
+    <color name="textColorSecondaryLight">#666666</color>
+    <color name="mehroon">#D96868</color>
+    <color name="light_black">#ACACAC</color>
+    <color name="Mehroon">#880D6D</color>
+    <color name="yellow">#D1A646</color>
+    <color name="mehroon_one">#880D6D</color>
+    <color name="gray">#6E7FAA</color>
+
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    tools:context="com.example.NailedOwner.SelectCategory.SelectCategory">
+
+    <TextView
+        android:layout_marginTop="@dimen/pading20"
+        android:id="@+id/txt_add"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/light_black"
+        android:text="Choose Category"
+        android:textSize="@dimen/pading24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    </TextView>
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"
+        android:elevation="6dp"
+        android:padding="5dp"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/padding10"
+        android:background="@drawable/whiteeditround"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+
+        <Spinner
+            android:backgroundTint="@color/white"
+            android:textSize="@dimen/padding18"
+            android:id="@+id/Spn_Category"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+        </Spinner>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_marginBottom="@dimen/pading20"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/pading20"
+        android:layout_marginRight="@dimen/pading20"
+        android:layout_marginLeft="@dimen/pading20"
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Next"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/pading18" />
+
+</RelativeLayout>

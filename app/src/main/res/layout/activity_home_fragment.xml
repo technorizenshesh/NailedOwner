@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@mipmap/splash_bg"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/RR_add"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txt_add"
+            android:textColor="@color/white"
+            android:text="Home"
+            android:textSize="@dimen/pading24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <Switch
+            android:checked="true"
+            android:trackTint="@drawable/newtrack"
+            android:layout_marginRight="@dimen/pading10"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></Switch>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/RR_add"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/pading10"
+        android:background="#1E1E1E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/LL_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/user_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/pading10"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:src="@drawable/haircut_img"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
+
+            <LinearLayout
+                android:padding="@dimen/pading10"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/pading5"
+                android:layout_toRightOf="@+id/user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:textColor="@color/white"
+                    android:text="Id:546141 4002"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pading20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:text="Nell's ist Time Book"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pading20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:layout_marginTop="@dimen/pading20"
+                    android:textColor="@color/white"
+                    android:text="1 X Hair cut"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pading16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_marginTop="@dimen/pading10"
+                    android:textColor="@color/white"
+                    android:text="2 X Bread timm"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pading16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/pading20"
+            android:layout_below="@+id/LL_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:backgroundTint="#DE2121"
+                android:background="@drawable/roundbttn_register"
+                android:layout_margin="@dimen/pading10"
+                android:layout_width="100dp"
+                android:layout_height="45dp">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:text="Reject"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/pading16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/btn_Login_accept"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/RR_login"
+                android:layout_gravity="center"
+                android:text="Accept Order (0-30)"
+                android:background="@drawable/roundbttn_register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading16" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

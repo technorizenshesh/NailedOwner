@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    tools:context="com.example.NailedOwner.AddSaloonPhoto.AddsaloonPhotos">
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/progressBar"
+        android:background="@drawable/progresh_background"
+        android:elevation="@dimen/padding6"
+        android:padding="@dimen/padding5"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/green_new"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_above="@+id/btn_next_timing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:id="@+id/txt_add"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/light_black"
+                    android:text="Add Timing"
+                    android:textSize="@dimen/pading24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/light_black"
+                    android:text="Weekly Close"
+                    android:textSize="@dimen/pading14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_weekly_close"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/light_black"
+                    android:text="Open Timing"
+                    android:textSize="@dimen/pading14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_open_time"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_marginRight="@dimen/pading10"
+                        android:layout_marginLeft="@dimen/pading10"
+                        android:layout_marginTop="@dimen/pading20"
+                        android:layout_below="@+id/txt_add"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <RelativeLayout
+                            android:id="@+id/RR_monday"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:textSize="@dimen/padding18"
+                                android:layout_marginTop="@dimen/padding10"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/txt_Monday"
+                                android:textColor="@color/light_black"
+                                android:text="Monday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_monday_open"
+                                android:textSize="@dimen/padding16"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/padding20"
+                                android:layout_below="@+id/txt_Monday"
+                                android:textColor="@color/light_black"
+                                android:text="Choose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/RR_tuesday"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:textSize="@dimen/padding18"
+                                android:layout_marginTop="@dimen/padding10"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/txt_tuesday"
+                                android:textColor="@color/light_black"
+                                android:text="Tuesday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_tuesday_open"
+                                android:textSize="@dimen/padding16"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/padding20"
+                                android:layout_below="@+id/txt_tuesday"
+                                android:textColor="@color/light_black"
+                                android:text="Choose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/RR_wednesday"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:textSize="@dimen/padding18"
+                                android:layout_marginTop="@dimen/padding10"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/txt_wednesday"
+                                android:textColor="@color/light_black"
+                                android:text="Wednesday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_wednesday_open"
+                                android:textSize="@dimen/padding16"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/padding20"
+                                android:layout_below="@+id/txt_wednesday"
+                                android:textColor="@color/light_black"
+                                android:text="Choose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_marginRight="@dimen/pading10"
+                        android:layout_marginLeft="@dimen/pading10"
+                        android:layout_marginTop="@dimen/pading20"
+                        android:layout_below="@+id/txt_add"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <RelativeLayout
+                            android:id="@+id/RR_thursday"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:textSize="@dimen/padding18"
+                                android:layout_marginTop="@dimen/padding10"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/txt_thursday"
+                                android:textColor="@color/light_black"
+                                android:text="Thursday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_thursday_open"
+                                android:textSize="@dimen/padding16"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/padding20"
+                                android:layout_below="@+id/txt_thursday"
+                                android:textColor="@color/light_black"
+                                android:text="Choose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/RR_Friday"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:textSize="@dimen/padding18"
+                                android:layout_marginTop="@dimen/padding10"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/txt_Friday"
+                                android:textColor="@color/light_black"
+                                android:text="Friday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_friday_open"
+                                android:textSize="@dimen/padding16"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/padding20"
+                                android:layout_below="@+id/txt_Friday"
+                                android:textColor="@color/light_black"
+                                android:text="Choose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/RR_saturday"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:textSize="@dimen/padding18"
+                                android:layout_marginTop="@dimen/padding10"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/txt_saturday"
+                                android:textColor="@color/light_black"
+                                android:text="Saturday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_saturday_open"
+                                android:textSize="@dimen/padding16"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/padding20"
+                                android:layout_below="@+id/txt_saturday"
+                                android:textColor="@color/light_black"
+                                android:text="Choose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_marginRight="@dimen/pading10"
+                        android:layout_marginLeft="@dimen/pading10"
+                        android:layout_marginTop="@dimen/pading20"
+                        android:layout_below="@+id/txt_add"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <RelativeLayout
+                            android:id="@+id/RR_sunday"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:textSize="@dimen/padding18"
+                                android:layout_marginTop="@dimen/padding10"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/txt_sunday"
+                                android:textColor="@color/light_black"
+                                android:text="Sunday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/txt_sunday_open"
+                                android:textSize="@dimen/padding16"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/padding20"
+                                android:layout_below="@+id/txt_sunday"
+                                android:textColor="@color/light_black"
+                                android:text="Choose"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:visibility="invisible"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:visibility="invisible"
+                            android:layout_margin="@dimen/pading5"
+                            android:background="@drawable/whiteeditround"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/RR_sunday_time"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="@dimen/pading20"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="115dp"
+                        android:layout_height="60dp"
+                        >
+
+                        <TextView
+                            android:textColor="@color/light_black"
+                            android:layout_centerInParent="true"
+                            android:text="Sunday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/light_black"
+                    android:text="Close Timing"
+                    android:textSize="@dimen/pading14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_close_time"
+                    android:layout_width="match_parent"
+                    android:layout_margin="5dp"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_marginRight="@dimen/pading10"
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:layout_below="@+id/txt_add"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <RelativeLayout
+                        android:id="@+id/RR_monday_close"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textSize="@dimen/padding18"
+                            android:layout_marginTop="@dimen/padding10"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_Monday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Monday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_Monday_close_one"
+                            android:textSize="@dimen/padding16"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/padding20"
+                            android:layout_below="@+id/txt_Monday_close"
+                            android:textColor="@color/light_black"
+                            android:text="9:30 Am"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/RR_tuesday_close"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textSize="@dimen/padding18"
+                            android:layout_marginTop="@dimen/padding10"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_tuesday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Tuesday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_tuesday_close_open"
+                            android:textSize="@dimen/padding16"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/padding20"
+                            android:layout_below="@+id/txt_tuesday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/RR_wednesday_close"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textSize="@dimen/padding18"
+                            android:layout_marginTop="@dimen/padding10"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_wednesday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Wednesday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_wednesday_close_open"
+                            android:textSize="@dimen/padding16"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/padding20"
+                            android:layout_below="@+id/txt_wednesday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_marginRight="@dimen/pading10"
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:layout_below="@+id/txt_add"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <RelativeLayout
+                        android:id="@+id/RR_thursday_close"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textSize="@dimen/padding18"
+                            android:layout_marginTop="@dimen/padding10"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_thursday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Thursday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_thursday_close_open"
+                            android:textSize="@dimen/padding16"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/padding20"
+                            android:layout_below="@+id/txt_thursday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/RR_Friday_close"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textSize="@dimen/padding18"
+                            android:layout_marginTop="@dimen/padding10"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_Friday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Friday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_Friday_close_open"
+                            android:textSize="@dimen/padding16"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/padding20"
+                            android:layout_below="@+id/txt_Friday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/RR_saturday_close"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textSize="@dimen/padding18"
+                            android:layout_marginTop="@dimen/padding10"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_saturday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Saturday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_saturday_close_open"
+                            android:textSize="@dimen/padding16"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/padding20"
+                            android:layout_below="@+id/txt_saturday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_marginRight="@dimen/pading10"
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_marginTop="@dimen/pading20"
+                    android:layout_below="@+id/txt_add"
+                    android:weightSum="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <RelativeLayout
+                        android:id="@+id/RR_sunday_close"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:textSize="@dimen/padding18"
+                            android:layout_marginTop="@dimen/padding10"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/txt_sunday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Sunday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_sunday_close_open"
+                            android:textSize="@dimen/padding16"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/padding20"
+                            android:layout_below="@+id/txt_sunday_close"
+                            android:textColor="@color/light_black"
+                            android:text="Choose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="invisible"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="invisible"
+                        android:layout_margin="@dimen/pading5"
+                        android:background="@drawable/whiteeditround"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_marginBottom="@dimen/pading20"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/pading20"
+        android:layout_marginRight="@dimen/pading20"
+        android:layout_marginLeft="@dimen/pading20"
+        android:id="@+id/btn_next_timing"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Next"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/pading18" />
+
+
+</RelativeLayout>

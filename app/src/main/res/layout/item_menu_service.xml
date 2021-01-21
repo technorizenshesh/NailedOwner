@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:layout_margin="@dimen/padding10"
+        android:id="@+id/RR_camera"
+        android:layout_below="@+id/RR_add"
+        android:background="@drawable/whiteeditround"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/RR_remove"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/padding30"
+            android:layout_height="@dimen/padding30"
+            >
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/cross_icon"
+                android:layout_width="@dimen/padding25"
+                android:layout_height="@dimen/padding25"
+                ></ImageView>
+
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:id="@+id/img_hair_cut"
+            android:src="@mipmap/haircut"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            ></ImageView>
+
+        <RelativeLayout
+            android:layout_margin="@dimen/pading10"
+            android:layout_toRightOf="@+id/img_hair_cut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_below="@+id/img_camera"
+                android:textColor="@color/white"
+                android:text="Hair Cut"
+                android:textSize="@dimen/pading22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:layout_below="@+id/txt_name"
+                android:textColor="@color/white"
+                android:text="$19"
+                android:textSize="@dimen/pading16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+        </RelativeLayout>
+
+        <Switch
+            android:checked="true"
+            android:backgroundTint="@color/colorAccentRed"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        </Switch>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txt_minute"
+            android:layout_margin="@dimen/pading10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:text="20 min"
+            android:textSize="@dimen/pading16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

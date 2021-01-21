@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    tools:context="com.example.NailedOwner.AddServicesTwo.AddServicesTwo">
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/progressBar"
+        android:background="@drawable/progresh_background"
+        android:elevation="@dimen/padding6"
+        android:padding="@dimen/padding5"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/green_new"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/RR_add"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/txt_add"
+            android:textColor="@color/white"
+            android:text="Add Services"
+            android:textSize="@dimen/pading24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/add_services"
+            android:layout_marginRight="@dimen/pading10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/plus_one"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            ></ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_above="@+id/btn_next_services"
+        android:layout_below="@+id/RR_add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_getServces"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_marginBottom="@dimen/pading20"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/pading20"
+        android:layout_marginRight="@dimen/pading20"
+        android:layout_marginLeft="@dimen/pading20"
+        android:id="@+id/btn_next_services"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Next"
+        android:background="@drawable/roundbttn_register"
+        android:textAllCaps="false"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/pading18" />
+
+
+</RelativeLayout>

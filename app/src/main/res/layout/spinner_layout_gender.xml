@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#1E1E1E"
+    >
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rll_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padding50"
+        >
+
+        <TextView
+            android:padding="5dp"
+            android:text=""
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="7dp"
+            android:textSize="17dp"
+            >
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

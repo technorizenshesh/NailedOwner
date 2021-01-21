@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    tools:context="com.example.NailedOwner.HomeScree.HomeActivity">
+
+    <FrameLayout
+        android:layout_marginBottom="@dimen/padding20"
+        android:layout_above="@+id/RR_bottom"
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      />
+
+    <LinearLayout
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:id="@+id/RR_bottom"
+        android:background="@drawable/ronded_top_corner"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+        <RelativeLayout
+            android:id="@+id/RR_home"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:tint="@color/mehroon_one"
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_home"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home"
+                android:layout_marginLeft="10dp"
+                android:layout_width="35dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/txt_Home"
+                android:layout_marginTop="5dp"
+                android:textSize="12dp"
+                android:text="Home"
+                android:textColor="@color/mehroon_one"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="-5dp"
+            android:id="@+id/RR_Services"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_services"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/list"
+                android:layout_width="35dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginLeft="-10dp"
+                android:id="@+id/txt_services"
+                android:layout_marginTop="5dp"
+                android:textSize="12dp"
+                android:text="Services"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img_services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="5dp"
+            android:id="@+id/RR_Dashboard"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_Dashboard"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/dashboard"
+                android:layout_width="35dp"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/black"
+                android:id="@+id/txt_Dashboard"
+                android:textSize="12dp"
+                android:text="Dashboard"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img_Dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="5dp"
+            android:id="@+id/RR_Profile"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_Profile"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/user"
+                android:layout_width="35dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/black"
+                android:id="@+id/txt_profile"
+                android:textSize="12dp"
+                android:text="Profile"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img_Profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RR_more"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_more"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/dashboard"
+                android:layout_width="35dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/txt_more"
+                android:layout_marginTop="8dp"
+                android:textSize="12dp"
+                android:text="More"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/img_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

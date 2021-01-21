@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1042171707831",
+    "project_id": "nailedowner",
+    "storage_bucket": "nailedowner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042171707831:android:631c9a879aa4506aaea832",
+        "android_client_info": {
+          "package_name": "com.example.NailedOwner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042171707831-p9cafhqkllibinnnbvdpk3818jf6e2mo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.NailedOwner",
+            "certificate_hash": "e76fd6813e32f41ae84f88740c30767c05f9ef2a"
+          }
+        },
+        {
+          "client_id": "1042171707831-jitc4j64env6st7vpqlglmgcnucpu2fb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9pIcncxACXsr1LNs1pr-79d20r91OyWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042171707831-jitc4j64env6st7vpqlglmgcnucpu2fb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

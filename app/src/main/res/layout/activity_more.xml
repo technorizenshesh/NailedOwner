@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context="com.example.NailedOwner.SignUpScreen.SignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="@dimen/pading5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_marginTop="@dimen/pading20"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More"
+                android:textColor="@color/white"
+                android:textSize="@dimen/pading20">
+            </TextView>
+
+            <RelativeLayout
+                android:layout_marginTop="30dp"
+                android:background="#1E1E1E"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manages Services Menus"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading16">
+
+                </TextView>
+
+                <ImageView
+                    android:tint="@color/light_black"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/pading5"
+                android:background="#1E1E1E"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Tracking"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading16">
+
+                </TextView>
+
+                <ImageView
+                    android:tint="@color/light_black"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/pading5"
+                android:background="#1E1E1E"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Reviews"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading16">
+
+                </TextView>
+
+                <ImageView
+                    android:tint="@color/light_black"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/pading5"
+                android:background="#1E1E1E"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Ability"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading16">
+
+                </TextView>
+
+                <ImageView
+                    android:tint="@color/light_black"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/pading5"
+                android:background="#1E1E1E"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Promotion"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading16">
+
+                </TextView>
+
+                <ImageView
+                    android:tint="@color/light_black"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RR_getSaloonPic"
+                android:layout_marginTop="@dimen/pading5"
+                android:background="#1E1E1E"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saloon Photos"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading16">
+
+                </TextView>
+
+                <ImageView
+                    android:tint="@color/light_black"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RR_Services"
+                android:layout_marginTop="@dimen/pading5"
+                android:background="#1E1E1E"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/pading10"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saloon Certificate"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pading16">
+
+                </TextView>
+
+                <ImageView
+                    android:tint="@color/light_black"
+                    android:src="@drawable/arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/pading20"
+                    android:layout_height="@dimen/pading20">
+
+                </ImageView>
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/pading20"
+                android:layout_marginTop="@dimen/pading20"
+                android:layout_marginRight="@dimen/pading20"
+                android:layout_marginLeft="@dimen/pading20"
+                android:id="@+id/btn_Logout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:text="Logout"
+                android:background="@drawable/roundbttn_register"
+                android:textAllCaps="false"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/pading18" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
