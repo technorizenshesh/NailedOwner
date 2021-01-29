@@ -21,9 +21,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="LockedOrientationActivity">
-        <activity android:name=".AllServices.UpdateServices.UpdateServices"
+        <activity android:name=".AddTiming.OpenTimeCloseTimeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" ></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".AllServices.UpdateServices.UpdateServices"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".GetCertificate.GetCertificateActivity"
             android:screenOrientation="portrait"

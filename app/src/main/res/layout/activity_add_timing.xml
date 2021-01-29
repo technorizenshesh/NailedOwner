@@ -41,27 +41,30 @@
                     android:id="@+id/txt_add"
                     android:layout_centerHorizontal="true"
                     android:textColor="@color/light_black"
-                    android:text="Add Timing"
+                    android:text="Weekly Close"
                     android:textSize="@dimen/pading24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </TextView>
 
                 <TextView
+                    android:visibility="gone"
                     android:layout_marginLeft="@dimen/pading10"
                     android:layout_marginTop="@dimen/pading20"
                     android:layout_centerHorizontal="true"
                     android:textColor="@color/light_black"
                     android:text="Weekly Close"
-                    android:textSize="@dimen/pading14"
+                    android:textSize="@dimen/padding16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </TextView>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_weekly_close"
+                    android:layout_marginTop="@dimen/padding50"
                     android:layout_width="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_marginRight="@dimen/padding5"
+                    android:layout_marginLeft="@dimen/padding5"
                     android:nestedScrollingEnabled="false"
                     android:layout_height="wrap_content"
                     android:scrollbars="vertical"
@@ -69,6 +72,7 @@
                     />
 
                 <TextView
+                    android:visibility="gone"
                     android:layout_marginLeft="@dimen/pading10"
                     android:layout_marginTop="@dimen/pading20"
                     android:layout_centerHorizontal="true"
@@ -80,6 +84,7 @@
                 </TextView>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
                     android:id="@+id/recycler_open_time"
                     android:layout_width="match_parent"
                     android:layout_margin="5dp"
@@ -433,6 +438,7 @@
                     android:layout_centerHorizontal="true"
                     android:textColor="@color/light_black"
                     android:text="Close Timing"
+                    android:visibility="gone"
                     android:textSize="@dimen/pading14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -442,6 +448,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_close_time"
                     android:layout_width="match_parent"
+                    android:visibility="gone"
                     android:layout_margin="5dp"
                     android:nestedScrollingEnabled="false"
                     android:layout_height="wrap_content"

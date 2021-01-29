@@ -99,6 +99,7 @@ public class SignUpActivity extends AppCompatActivity{
     private Preference preference;
     private String android_id ="";
     String DOb ="";
+
     RelativeLayout RR_one_doc;
     RelativeLayout RR_two_doc;
     RelativeLayout RR_profile;
@@ -133,6 +134,7 @@ public class SignUpActivity extends AppCompatActivity{
     GPSTracker gpsTracker;
     String latitude ="";
     String longitude ="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +147,7 @@ public class SignUpActivity extends AppCompatActivity{
             window.setStatusBarColor(ContextCompat.getColor(
                     this, R.color.black1));
         }
+
         spinnergender =findViewById(R.id.spinnergender);
 
         GenderSpinnerAdapter customAdapter=new GenderSpinnerAdapter(SignUpActivity.this,flags,code);
@@ -697,6 +700,7 @@ public class SignUpActivity extends AppCompatActivity{
         }
 
         RequestBody Username =RequestBody.create(MediaType.parse("text/plain"),UserName);
+        RequestBody LastName =RequestBody.create(MediaType.parse("text/plain"),"LastName");
         RequestBody Email =RequestBody.create(MediaType.parse("text/plain"),email);
         RequestBody Mobile =RequestBody.create(MediaType.parse("text/plain"),mobile);
         RequestBody Gender =RequestBody.create(MediaType.parse("text/plain"),gender);
@@ -712,7 +716,7 @@ public class SignUpActivity extends AppCompatActivity{
         retrofit2.Call<SignUpModel> call = RetrofitClients
                 .getInstance()
                 .getApi()
-                .USER_signup1(Username,Address,Email,Password,Mobile,Lat,Lon,city,Zip_code
+                .USER_signup1(Username,LastName,Address,Email,Password,Mobile,Lat,Lon,city,Zip_code
                 ,Dob_id,Gender,Register_id,imgFile_one,imgFile_two,imgFile_three);
         call.enqueue(new Callback<SignUpModel>() {
             @Override
@@ -743,11 +747,13 @@ public class SignUpActivity extends AppCompatActivity{
 
                 } catch (Exception e) {
                     e.printStackTrace();
+                    Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<SignUpModel> call, Throwable t) {
+                Toast.makeText(SignUpActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
             }
         });

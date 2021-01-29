@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import  com.example.NailedOwner.R;
+import com.example.NailedOwner.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -21,7 +21,7 @@ import java.util.Calendar;
 /**
  * A custom adapter to use with the RecyclerView widget.
  */
-public class CloseTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class OpenTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     int pos = 0;
     private Context mContext;
@@ -30,9 +30,11 @@ public class CloseTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     int mHour;
     int mMinute;
 
-    String timeFinal_close ="Close";
 
-    public CloseTimeRecyclerViewAdapter(Context context, ArrayList<DaysModelData> modelList) {
+
+    String timeFinal ="Close";
+
+    public OpenTimeRecyclerViewAdapter(Context context, ArrayList<DaysModelData> modelList) {
         this.mContext = context;
         this.modelList = modelList;
     }
@@ -52,7 +54,9 @@ public class CloseTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         //Here you can fill your row view
         if (holder instanceof ViewHolder) {
+
             final DaysModelData model = getItem(position);
+
             final ViewHolder genericViewHolder = (ViewHolder) holder;
 
             String WeeklyClose =model.getWeeklyDay().toString();
@@ -61,7 +65,6 @@ public class CloseTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
             if(WeeklyClose.equalsIgnoreCase("close"))
             {
-
                 genericViewHolder.RR_monday.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -69,9 +72,7 @@ public class CloseTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                         Toast.makeText(mContext, model.getName()+" Already Selected in Weekly Off", Toast.LENGTH_SHORT).show();
                     }
                 });
-
                 genericViewHolder.txt_monday_open.setText(WeeklyClose);
-
             }else {
 
                 genericViewHolder.RR_monday.setOnClickListener(new View.OnClickListener() {
@@ -96,37 +97,37 @@ public class CloseTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
 
                                         genericViewHolder.txt_monday_open.setText(hourOfDay + ":" + minute+" AM");
 
-                                        timeFinal_close = hourOfDay + ":" + minute+" AM";
+                                        timeFinal = hourOfDay + ":" + minute+" AM";
 
-                                        if(position == 0)
+                                         if(position == 0)
                                         {
-                                            OpenTimeCloseTimeActivity.sunday_close =timeFinal_close;
+                                            OpenTimeCloseTimeActivity.sunday_open =timeFinal;
 
                                         }else if(position == 1)
                                         {
 
-                                            OpenTimeCloseTimeActivity.Monday_close =timeFinal_close;
+                                            OpenTimeCloseTimeActivity.Monday_open =timeFinal;
 
                                         }else if(position == 2)
                                         {
-                                            OpenTimeCloseTimeActivity.tuesDay_open =timeFinal_close;
+                                            OpenTimeCloseTimeActivity.tuesDay_open =timeFinal;
 
                                         }else if(position == 3)
                                         {
-                                            OpenTimeCloseTimeActivity.wednesday_close =timeFinal_close;
+                                            OpenTimeCloseTimeActivity.wednesday_open =timeFinal;
 
                                         }else if(position == 4)
                                         {
 
-                                            OpenTimeCloseTimeActivity.thursday_close =timeFinal_close;
+                                            OpenTimeCloseTimeActivity.thursday_open =timeFinal;
 
                                         }else if(position == 5)
                                         {
-                                            OpenTimeCloseTimeActivity.Friday_close =timeFinal_close;
+                                            OpenTimeCloseTimeActivity.Friday_open =timeFinal;
 
                                         }else if(position == 6)
                                         {
-                                            OpenTimeCloseTimeActivity.saturday_close =timeFinal_close;
+                                            OpenTimeCloseTimeActivity.saturday_open =timeFinal;
 
                                         }
 
@@ -138,6 +139,8 @@ public class CloseTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                 });
 
             }
+
+
            // genericViewHolder.txt_time_one.setText(model.getTie_one());
         }
     }

@@ -14,6 +14,20 @@ public class DaysModelData {
     @SerializedName("date_time")
     @Expose
     private String dateTime;
+    @SerializedName("weekly_day")
+    @Expose
+    private String weeklyDay;
+    private boolean isSelected = false;
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
+
 
     public String getId() {
         return id;
@@ -37,6 +51,14 @@ public class DaysModelData {
 
     public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public String getWeeklyDay() {
+        return weeklyDay;
+    }
+
+    public void setWeeklyDay(String weeklyDay) {
+        this.weeklyDay = weeklyDay;
     }
 
 }

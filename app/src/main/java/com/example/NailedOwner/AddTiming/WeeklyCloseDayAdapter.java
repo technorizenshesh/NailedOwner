@@ -21,16 +21,16 @@ public class WeeklyCloseDayAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     int pos = 0;
     private Context mContext;
-    private ArrayList<OpenTimingModel> modelList;
+    private ArrayList<DaysModelData> modelList;
     private OnItemClickListener mItemClickListener;
     String c="";
 
-    public WeeklyCloseDayAdapter(Context context, ArrayList<OpenTimingModel> modelList) {
+    public WeeklyCloseDayAdapter(Context context, ArrayList<DaysModelData> modelList) {
         this.mContext = context;
         this.modelList = modelList;
     }
 
-    public void updateList(ArrayList<OpenTimingModel> modelList) {
+    public void updateList(ArrayList<DaysModelData> modelList) {
         this.modelList = modelList;
         notifyDataSetChanged();
     }
@@ -46,11 +46,11 @@ public class WeeklyCloseDayAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         //Here you can fill your row view
         if (holder instanceof ViewHolder) {
 
-            final OpenTimingModel model = getItem(position);
+            final DaysModelData model = getItem(position);
 
             final ViewHolder genericViewHolder = (ViewHolder) holder;
 
-            genericViewHolder.txt_time.setText(model.getTime());
+            genericViewHolder.txt_time.setText(model.getName());
 
             genericViewHolder.RR_item.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -85,14 +85,14 @@ public class WeeklyCloseDayAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         this.mItemClickListener = mItemClickListener;
     }
 
-    private OpenTimingModel getItem(int position) {
+    private DaysModelData getItem(int position) {
         return modelList.get(position);
     }
 
 
     public interface OnItemClickListener {
 
-        void onItemClick(View view, int position, OpenTimingModel model);
+        void onItemClick(View view, int position, DaysModelData model);
 
     }
 

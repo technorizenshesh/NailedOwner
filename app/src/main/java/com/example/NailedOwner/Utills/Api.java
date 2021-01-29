@@ -29,6 +29,7 @@ public interface Api {
     String delete_service = "delete_service";
     String change_password = "change_password";
     String get_day = "get_day";
+    String get_weekly_day = "get_weekly_day";
     String USER_add_certificate = "add_certificate";
 
 
@@ -130,15 +131,21 @@ public interface Api {
             @Field("password") String password
     );
 
+    @FormUrlEncoded
+    @POST(get_weekly_day)
+    Call<DaysModel>get_weekly_day(
+            @Field("day_name") String day_name
+    );
+
 
     @POST(get_day)
     Call<DaysModel> get_day();
 
-
     @Multipart
     @POST(USER_provider_signup)
     Call<SignUpModel> USER_signup1(
-            @Part("user_name") RequestBody user_name,
+            @Part("first_name") RequestBody first_name,
+            @Part("last_name") RequestBody last_name,
             @Part("address") RequestBody address,
             @Part("email") RequestBody email,
             @Part("password") RequestBody password,
