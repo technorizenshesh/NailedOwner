@@ -19,7 +19,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AcceptingActivity extends AppCompatActivity {
 
-
     RelativeLayout RR_back;
     RelativeLayout LL_txt;
     Button btn_pending;
@@ -71,6 +70,7 @@ public class AcceptingActivity extends AppCompatActivity {
 
             }
         });
+
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

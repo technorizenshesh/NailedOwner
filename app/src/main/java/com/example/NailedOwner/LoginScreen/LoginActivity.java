@@ -206,7 +206,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             longitude = String.valueOf(gpsTracker.getLongitude());
 
         }else{
+
             gpsTracker.showSettingsAlert();
+
         }
     }
 

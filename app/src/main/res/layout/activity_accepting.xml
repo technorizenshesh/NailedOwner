@@ -13,7 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         >
+
         <RelativeLayout
+            android:visibility="gone"
             android:id="@+id/RR_back"
             android:layout_width="50dp"
             android:layout_height="match_parent">
@@ -33,7 +35,7 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/txt_add"
             android:textColor="@color/white"
-            android:text="Accepting"
+            android:text="Home"
             android:textSize="@dimen/pading24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -59,7 +61,7 @@
             android:layout_height="45dp"
             android:layout_below="@+id/RR_login"
             android:layout_gravity="center"
-            android:text="Pending (2)"
+            android:text="Pending"
             android:background="@drawable/roundbttn_register"
             android:textAllCaps="false"
             android:textColor="@color/white"

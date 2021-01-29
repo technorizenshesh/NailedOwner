@@ -18,7 +18,8 @@
         android:indeterminate="true"
         android:indeterminateTintMode="src_atop"
         android:indeterminateTint="@color/colorPrimary"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        />
 
     <ScrollView
         android:layout_above="@+id/btn_next"
@@ -43,7 +44,9 @@
                     android:text="Add Services"
                     android:textSize="@dimen/pading24"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    >
+
                 </TextView>
 
                 <RelativeLayout
@@ -83,7 +86,9 @@
                         android:layout_marginTop="0dp"
                         android:text="(0/7)"
                         android:textColor="@color/light_black"
-                        android:textSize="@dimen/pading14"></TextView>
+                        android:textSize="@dimen/pading14">
+
+                    </TextView>
 
                 </RelativeLayout>
 
@@ -400,7 +405,6 @@
                 </TextView>
 
                 <LinearLayout
-                    android:backgroundTint="@color/Mehroon"
                     android:visibility="visible"
                     android:layout_marginTop="@dimen/pading20"
                     android:layout_centerInParent="true"
@@ -542,8 +546,5 @@
         </RelativeLayout>
 
     </ScrollView>
-
-
-
 
 </RelativeLayout>
