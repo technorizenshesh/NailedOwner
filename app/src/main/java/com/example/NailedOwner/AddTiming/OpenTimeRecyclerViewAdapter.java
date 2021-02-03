@@ -72,7 +72,42 @@ public class OpenTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
                         Toast.makeText(mContext, model.getName()+" Already Selected in Weekly Off", Toast.LENGTH_SHORT).show();
                     }
                 });
+
+                if(position == 0)
+                {
+                    OpenTimeCloseTimeActivity.sunday_open ="close";
+
+                }else if(position == 1)
+                {
+
+                    OpenTimeCloseTimeActivity.Monday_open ="close";
+
+                }else if(position == 2)
+                {
+                    OpenTimeCloseTimeActivity.tuesDay_open ="close";
+
+                }else if(position == 3)
+                {
+                    OpenTimeCloseTimeActivity.wednesday_open ="close";
+
+                }else if(position == 4)
+                {
+
+                    OpenTimeCloseTimeActivity.thursday_open ="close";
+
+                }else if(position == 5)
+                {
+                    OpenTimeCloseTimeActivity.Friday_open ="close";
+
+                }else if(position == 6)
+                {
+                    OpenTimeCloseTimeActivity.saturday_open ="close";
+
+                }
+
                 genericViewHolder.txt_monday_open.setText(WeeklyClose);
+
+
             }else {
 
                 genericViewHolder.RR_monday.setOnClickListener(new View.OnClickListener() {
@@ -95,9 +130,9 @@ public class OpenTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
 
                                         Toast.makeText(mContext, ""+model.getName(), Toast.LENGTH_SHORT).show();
 
-                                        genericViewHolder.txt_monday_open.setText(hourOfDay + ":" + minute+" AM");
+                                        genericViewHolder.txt_monday_open.setText(hourOfDay + ":" + minute);
 
-                                        timeFinal = hourOfDay + ":" + minute+" AM";
+                                        timeFinal = hourOfDay + ":" + minute;
 
                                          if(position == 0)
                                         {

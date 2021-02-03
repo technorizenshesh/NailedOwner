@@ -70,6 +70,38 @@ public class CloseTimeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerV
                     }
                 });
 
+                if(position == 0)
+                {
+                    OpenTimeCloseTimeActivity.sunday_close ="close";
+
+                }else if(position == 1)
+                {
+
+                    OpenTimeCloseTimeActivity.Monday_close ="close";
+
+                }else if(position == 2)
+                {
+                    OpenTimeCloseTimeActivity.tuesDay_open ="close";
+
+                }else if(position == 3)
+                {
+                    OpenTimeCloseTimeActivity.wednesday_close ="close";
+
+                }else if(position == 4)
+                {
+
+                    OpenTimeCloseTimeActivity.thursday_close ="close";
+
+                }else if(position == 5)
+                {
+                    OpenTimeCloseTimeActivity.Friday_close ="close";
+
+                }else if(position == 6)
+                {
+                    OpenTimeCloseTimeActivity.saturday_close ="close";
+
+                }
+
                 genericViewHolder.txt_monday_open.setText(WeeklyClose);
 
             }else {

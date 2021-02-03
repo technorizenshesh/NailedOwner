@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.NailedOwner"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -55,29 +55,45 @@ dependencies {
     implementation 'id.zelory:compressor:2.1.0'
     implementation 'com.karumi:dexter:6.0.1'
 
-    // Google Sign In
+  /*  // Google Sign In
     implementation 'com.google.firebase:firebase-auth:11.6.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.android.gms:play-services-auth:11.6.0'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation 'com.facebook.android:facebook-android-sdk:5.11.0'
-    //firebase related dependencies
-    // compile 'com.google.firebase:firebase-database:9.6.1'
-    implementation 'com.google.firebase:firebase-messaging:9.6.1'
-    // implementation 'com.google.firebase:firebase-auth:9.6.1'
+    implementation 'com.facebook.android:facebook-android-sdk:5.11.0'*/
+
+
     //okhttp
     implementation 'com.squareup.okhttp3:okhttp:3.4.1'
     //event bus
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'org.greenrobot:eventbus:3.0.0'
-    implementation 'com.google.android.gms:play-services:11.8.0'
+   // implementation 'com.google.android.gms:play-services:11.8.0'
     implementation 'com.squareup.retrofit2:retrofit:2.6.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
 
     implementation 'com.makeramen:roundedimageview:2.3.0'
 
     implementation 'com.github.joielechong:countrycodepicker:2.4.1'
+
+
+    //Google Login
+    //noinspection GradleCompatible
+    implementation 'com.google.firebase:firebase-messaging:9.6.1'
+    implementation 'com.google.firebase:firebase-auth:11.6.0'
+    implementation 'com.google.firebase:firebase-core:17.5.1'
+    implementation 'com.google.android.gms:play-services-auth:11.6.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+
+    //FaceBook
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    implementation platform('com.google.firebase:firebase-bom:26.2.0')
+    implementation 'com.google.firebase:firebase-auth'
+
+
+
 
 }
 apply plugin: 'com.google.gms.google-services'

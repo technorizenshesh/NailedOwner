@@ -10,4 +10,6 @@
     <string name="my_profile">My Profile</string>
     <string name="checkInternet">Please Check Your Internet Connection</string>
 
+    <string name="facebook_app_id">1100005620513866</string>
+
 </resources>

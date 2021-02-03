@@ -81,7 +81,6 @@ public class OpenTimeCloseTimeActivity extends AppCompatActivity implements IApi
         {
             Weekly_closeDay=intent.getStringExtra("Weekly_closeDay");
         }
-
         preference = new Preference(this);
 
         if (preference.isNetworkAvailable()) {

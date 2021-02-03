@@ -1,41 +1,42 @@
 {
   "project_info": {
-    "project_number": "1042171707831",
-    "project_id": "nailedowner",
-    "storage_bucket": "nailedowner.appspot.com"
+    "project_number": "1022572114464",
+    "firebase_url": "https://nailed-61361.firebaseio.com",
+    "project_id": "nailed-61361",
+    "storage_bucket": "nailed-61361.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1042171707831:android:631c9a879aa4506aaea832",
+        "mobilesdk_app_id": "1:1022572114464:android:5990da89b2b490aa1f8245",
         "android_client_info": {
           "package_name": "com.example.NailedOwner"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1042171707831-p9cafhqkllibinnnbvdpk3818jf6e2mo.apps.googleusercontent.com",
+          "client_id": "1022572114464-j1lin4r8n423rcd2ublq0sgnaqse63j4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.NailedOwner",
-            "certificate_hash": "e76fd6813e32f41ae84f88740c30767c05f9ef2a"
+            "certificate_hash": "d74d0e052d329ad017400f39860c7db884a6a960"
           }
         },
         {
-          "client_id": "1042171707831-jitc4j64env6st7vpqlglmgcnucpu2fb.apps.googleusercontent.com",
+          "client_id": "1022572114464-ida9715nputpttkcrjcknsnitgmfs0r0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD9pIcncxACXsr1LNs1pr-79d20r91OyWk"
+          "current_key": "AIzaSyAa1QYAfqjqte6Y0FogxL85qXZgF941OzI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1042171707831-jitc4j64env6st7vpqlglmgcnucpu2fb.apps.googleusercontent.com",
+              "client_id": "1022572114464-ida9715nputpttkcrjcknsnitgmfs0r0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

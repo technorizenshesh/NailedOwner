@@ -21,9 +21,20 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="LockedOrientationActivity">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
         <activity android:name=".AddTiming.OpenTimeCloseTimeActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+        </activity>
+
+
+
         <activity
             android:name=".AllServices.UpdateServices.UpdateServices"
             android:screenOrientation="portrait"
@@ -99,7 +110,12 @@
             android:name=".AddTiming.AddTiming"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan">
+
+
+
+        </activity>
+
         <activity
             android:name=".MoreScreen.MoreActivity"
             android:screenOrientation="portrait"
@@ -125,11 +141,14 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustPan">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".AddSaloonPhoto.AddsaloonPhotos"

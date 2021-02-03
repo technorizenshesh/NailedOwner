@@ -6,12 +6,16 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.InputType;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -43,6 +47,12 @@ import com.example.NailedOwner.SelectCategory.SelectCategory;
 import com.example.NailedOwner.Volley.ApiRequest;
 import com.example.NailedOwner.Volley.Constants;
 import com.example.NailedOwner.Volley.IApiResponse;
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -50,6 +60,11 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.Gson;
@@ -58,6 +73,8 @@ import com.google.gson.reflect.TypeToken;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener,IApiResponse {
@@ -68,6 +85,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private Button btn_Login;
     private TextView txt_forgot_password;
     private TextView txt_sign_in;
+    private RelativeLayout RR_faceBook;
 
     private EditText edt_mobile;
     private EditText edt_password;
@@ -88,6 +106,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     String latitude ="";
     String longitude ="";
 
+    //FaceBook
+    CallbackManager mCallbackManager;
+    LoginButton loginButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,6 +122,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             window.setStatusBarColor(ContextCompat.getColor(
                     this, R.color.black1));
         }
+
 
         //android device Id
         android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
@@ -177,9 +200,73 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
+
+        //FaceBook Login
+        mCallbackManager = CallbackManager.Factory.create();
+        loginButton.setReadPermissions("email", "public_profile");
+        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d("TAG", "facebook:onSuccess:" + loginResult);
+                handleFacebookAccessToken(loginResult.getAccessToken());
+            }
+            @Override
+            public void onCancel() {
+                Toast.makeText(LoginActivity.this, "btnCancel", Toast.LENGTH_SHORT).show();
+                Log.d("TAG", "facebook:onCancel");
+                // ...
+            }
+            @Override
+            public void onError(FacebookException error) {
+                Toast.makeText(LoginActivity.this, "Btnerrror", Toast.LENGTH_SHORT).show();
+                Log.d("TAG", "facebook:onError", error);
+                // ...
+            }
+        });
+
+    }
+
+    private void handleFacebookAccessToken(AccessToken token) {
+        Log.d("TAG", "handleFacebookAccessToken:" + token);
+        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+                            //   Toast.makeText(Activity_LoginOption.this, ""+token, Toast.LENGTH_SHORT).show();
+
+                            FirebaseUser user = mAuth.getCurrentUser();
+
+                            String UsernAME=user.getDisplayName();
+                            String email=user.getEmail();
+                            String SocialId=user.getUid();
+                            Uri Url=user.getPhotoUrl();
+
+                            if (preference.isNetworkAvailable()) {
+
+                                progressBar.setVisibility(View.VISIBLE);
+
+                                SocialLogin(UsernAME,"123456789",email,SocialId, String.valueOf(Url));
+
+                            }else {
+
+                                Toast.makeText(LoginActivity.this, R.string.checkInternet, Toast.LENGTH_SHORT).show();
+                            }
+
+
+                        } else {
+
+                            Toast.makeText(LoginActivity.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
     }
 
     private void findview() {
+        loginButton=findViewById(R.id.loginButton);
         RR_google_login=findViewById(R.id.RR_google_login);
         progressBar=findViewById(R.id.progressBar);
         spinnerCountry=(Spinner)findViewById(R.id.spinnerCountry);
@@ -189,6 +276,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         edt_mobile=findViewById(R.id.edt_mobile);
         edt_password=findViewById(R.id.edt_password);
         img_password=findViewById(R.id.img_password);
+        RR_faceBook=findViewById(R.id.RR_faceBook);
 
         try {
             if (ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
@@ -199,17 +287,20 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         }
 
         gpsTracker=new GPSTracker(this);
-
         if(gpsTracker.canGetLocation()){
-
             latitude = String.valueOf(gpsTracker.getLatitude());
             longitude = String.valueOf(gpsTracker.getLongitude());
-
         }else{
-
             gpsTracker.showSettingsAlert();
-
         }
+
+        RR_faceBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                loginButton.performClick();
+            }
+        });
     }
 
     private void validation() {
@@ -246,6 +337,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         }
     }
+
 
 
  /*   public static boolean isValidEmail(CharSequence target) {
@@ -427,6 +519,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent( data );
             handleSignInResult( result );
+        }else {
+            mCallbackManager.onActivityResult(requestCode, resultCode, data);
         }
     }
 
